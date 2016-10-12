@@ -1,7 +1,12 @@
 import inout.Console;
 
 /**
- * Created by mlintl on 09.10.2016.
+ * Die Klasse Geheimschrift ermöglicht wahlweise das Ver- und Entschlüsseln eines Textes mit Hilfe der
+ * Zweifachsubstitution.
+ * Das Schlüsselwort, sowie der Klartext bzw. Codetext werden von der Konsole eingelesen und dürfen nur aus Groß-
+ * buchstaben [A-Z] bestehen. Die Ausgabe des ver- / entdschlüsselten Textes erfolgt ebenfalls über die Konsole.
+ *
+ * Erstellt von M. Lintl am 10.10.2016
  */
 public class Geheimschrift {
     public static void main (String args[]){
@@ -47,12 +52,12 @@ public class Geheimschrift {
             }
         }
         else{
+            //wahl != 1 & wahl !=2
             System.out.println("Ungültige Funktionswahl.");
         }
     }
 
-    public static char[] verschluesseln(char[] schluessel, char[] klartext){
-        //Funktion Verschlüsseln
+    private static char[] verschluesseln(char[] schluessel, char[] klartext){
         char[] codetext = new char[klartext.length];
 
         for (int i = 0; i < klartext.length; i++) {
@@ -63,14 +68,12 @@ public class Geheimschrift {
             //Bestimmung des verschlüsselten Buchstabens
             char buchstabe = (char) ('A' + (schluessel[i%schluessel.length] - 'A' + versatz + 26 )%26);
 
-            //Speicherung
             codetext[i]=buchstabe;
         }
         return codetext;
     }
 
-    public static char[] entschluesseln(char[] schluessel, char[] codetext){
-        //Funktion Entschlüsseln
+    private static char[] entschluesseln(char[] schluessel, char[] codetext){
         char[] klartext = new char[codetext.length];
 
         for (int i = 0; i < codetext.length; i++) {
@@ -81,16 +84,15 @@ public class Geheimschrift {
             //Bestimmung des Klartextbuchstabens
             char buchstabe = (char) ('A'+ (i +  versatz + 26)%26);
 
-            //Speicherung
             klartext[i]=buchstabe;
         }
         return klartext;
     }
 
-    public static boolean eingabePruefen(char[] eingabe){
+    private static boolean eingabePruefen(char[] eingabe){
         boolean eingabeOK = true;
-        for(int i=0;i<eingabe.length;i++){
-            if(eingabe[i] < 'A' || eingabe[i]>'Z') eingabeOK=false;
+        for(char buchstabe : eingabe){
+            if(buchstabe <'A' || buchstabe > 'Z') eingabeOK=false; break;
         }
         return eingabeOK;
     }
