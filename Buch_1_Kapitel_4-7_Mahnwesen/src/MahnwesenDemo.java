@@ -33,7 +33,7 @@ public class MahnwesenDemo {
         System.out.println(ausgabetext);
     }
 
-    public static void druckeTrennlinie(){
+    private static void druckeTrennlinie(){
         System.out.println("______________________ ");
     }
 }
