@@ -1,11 +1,9 @@
 import inout.Console;
 
 /**
- Programm zur Umrechnung von Kilometer in Meilen
- und umgekehrt.
- Eingabewerte werden über die Konsole eingelesen
- * @author Michael Lintl
- * @version 1.0 (03.10.2016)
+ * Programm zur Umrechnung von Kilometer in Meilen und umgekehrt. Ein- und Ausgabe erfolgt über die Konsole.
+ *
+ * Erstellt durch M. Lintl am 03.10.2016
  */
 public class Kilometer {
     public static void main(String args[]) {
