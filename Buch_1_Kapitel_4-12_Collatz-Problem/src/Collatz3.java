@@ -1,7 +1,11 @@
 import inout.Console;
 
 /**
- * Created by mlintl on 05.10.2016.
+ * Die Klasse Collatz3 ermittelt die sogenannte Collatzfolge zu einem ganzzahligen Startwert, der über die Konsole
+ * eingelesen wird. Zusätzlich wird die Länge der Collatzfolge (ohne Startwert) und ihr größtes Folgenglied
+ * bestimmt und ausgegeben. Alle Ausgaben erfolgen auf der Konsole.
+ *
+ * Erstellt von M. Lintl am 05.10.2016
  */
 public class Collatz3 {
     public static void main(String args[]){

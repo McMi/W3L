@@ -1,7 +1,9 @@
-import inout.Console;
-
 /**
- * Created by mlintl on 05.10.2016.
+ * Die Klasse Collatz4 ermittelt die sogenannten Collatzfolgen für die ersten 40 positiven Zahlen als Startwerte.
+ * Zusätzlich wird zu jeder Folge ihre Länge(ohne Startwert) und ihr größtes Folgenglied bestimmt und ausgegeben.
+ * Alle Ausgaben erfolgen auf der Konsole.
+ *
+ * Erstellt von M. Lintl am 05.10.2016
  */
 public class Collatz4 {
     public static void main(String args[]){

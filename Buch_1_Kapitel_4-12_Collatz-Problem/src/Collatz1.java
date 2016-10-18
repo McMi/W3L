@@ -1,12 +1,15 @@
 import inout.Console;
 
 /**
- * Created by mlintl on 05.10.2016.
+ * Die Klasse Collatz1 ermittelt die sogenannte Collatzfolge zu einem ganzzahligen Startwert, der über die Konsole
+ * eingelesen wird. Die Ausgabe der ermittelten Folge erfolgt ebenfalls auf der Konsole.
+ *
+ * Erstellt von M. Lintl am 05.10.2016
  */
 public class Collatz1 {
     public static void main(String args[]){
         System.out.println("Ihre ganzzahlige Eingabe bitte:");
-        int rest = inout.Console.readInt();
+        int rest = Console.readInt();
 
         while(rest != 1){
             System.out.print(rest + " -> ");

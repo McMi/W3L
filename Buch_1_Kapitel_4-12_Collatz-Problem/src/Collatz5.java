@@ -1,5 +1,10 @@
 /**
- * Created by mlintl on 05.10.2016.
+ * Die Klasse Collatz5 ermittelt die sogenannten Collatzfolgen für die ersten 40 positiven Zahlen als Startwerte.
+ * Zusätzlich wird zu jeder Folge ihre Länge(ohne Startwert) und ihr größtes Folgenglied bestimmt und ausgegeben.
+ * Eine Erweiterung im Vergleich zur Klasse Collatz4 stellt die Bestimmung der größten auftretenden Differenz zweier
+ * Folgenglieder dar. Alle Ausgaben erfolgen auf der Konsole.
+ *
+ * Erstellt von M. Lintl am 05.10.2016
  */
 public class Collatz5 {
     public static void main(String args[]){
