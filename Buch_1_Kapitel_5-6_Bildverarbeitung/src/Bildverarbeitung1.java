@@ -12,12 +12,15 @@ public class Bildverarbeitung1 {
         int[][] bild = {{34,255,255,56},{127,204,11,34},{123,98,127,34},{34,34,127,17}};
         int[] haeufigkeit = new int[256];
 
+        //Schleife durch die erste und zweite Dimension des Feldes und hochzählen der Häufigkeit des entspr. Werts
         for(int i=0;i<bild.length;i++){
             for(int j=0; j<bild[i].length;j++){
                 haeufigkeit[bild[i][j]]++;
             }
         }
 
+        //Tabellarische Ausgabe der Häufigkeit
+        System.out.println("Tabellarische Übersicht der Farbwerte und ihrer Häufigkeiten:");
         for(int i=0; i<haeufigkeit.length;i++){
             if(haeufigkeit[i]>0) System.out.println("Farbwert: "+i+"\t"+"Häufigkeit: "+haeufigkeit[i]);
         }
