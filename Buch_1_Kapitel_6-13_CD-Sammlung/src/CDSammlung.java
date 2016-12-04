@@ -9,6 +9,43 @@ public class CDSammlung {
     private static final int kapazitaet = 5;
     private static CD[] sammlung = new CD[kapazitaet];
 
+    public static void main (String args[]){
+        //Leere Sammlung zu Beginn
+        System.out.println("Sammlung zum Zeitpunkt 0");
+        CDSammlung.zeigeCDSammlung();
+
+        //ersten zwei CDs hinzufügen
+        CD ersteCD = new CD("Mrs. Robinson", "Simon and Garfunkel");
+        CDSammlung.hinzufuegenCD( ersteCD);
+        CD zweiteCD = new CD("Mambo No. 5", "Lou Bega");
+        CDSammlung.hinzufuegenCD(zweiteCD);
+
+        //Sammlung nach dem Hinzufügen der ersten zwei CDs anzeigen
+        System.out.println("Sammlung zum Zeitpunkt 1");
+        CDSammlung.zeigeCDSammlung();
+
+        //dritte CD als anonymes Objekt hinzufügen
+        CDSammlung.hinzufuegenCD(new CD("Let it be","Beatles"));
+
+        //Sammlung nach dem Hinzufügen der dritten CD anzeigen
+        System.out.println("Sammlung zum Zeitpunkt 2");
+        CDSammlung.zeigeCDSammlung();
+
+        //Entfernen der zweiten CD mit Hilfe der zugehörigen Objektreferenz
+        CDSammlung.entfernenCD(zweiteCD);
+
+        //Anzeigen der Sammlung nach dem Entfernen
+        System.out.println("Sammlung zum Zeitpunkt 3");
+        CDSammlung.zeigeCDSammlung();
+
+        //Entfernen über Titel und Interpret
+        CDSammlung.entfernenCD("Test-Titel","Test-Interpret");
+
+        //Anzeigen der Sammlung nach dem Entfernen über Titel und Interpret
+        System.out.println("Sammlung zum Zeitpunkt 4");
+        CDSammlung.zeigeCDSammlung();
+    }
+
     private static void hinzufuegenCD(CD cd){
         int i =0;
         //Freien Platz i suchen
@@ -71,43 +108,6 @@ public class CDSammlung {
              }
         }
         System.out.println("");
-    }
-
-    public static void main (String args[]){
-        //Leere Sammlung zu Beginn
-        System.out.println("Sammlung zum Zeitpunkt 0");
-        CDSammlung.zeigeCDSammlung();
-
-        //ersten zwei CDs hinzufügen
-        CD ersteCD = new CD("Mrs. Robinson", "Simon and Garfunkel");
-        CDSammlung.hinzufuegenCD( ersteCD);
-        CD zweiteCD = new CD("Mambo No. 5", "Lou Bega");
-        CDSammlung.hinzufuegenCD(zweiteCD);
-
-        //Sammlung nach dem Hinzufügen der ersten zwei CDs anzeigen
-        System.out.println("Sammlung zum Zeitpunkt 1");
-        CDSammlung.zeigeCDSammlung();
-
-        //dritte CD als anonymes Objekt hinzufügen
-        CDSammlung.hinzufuegenCD(new CD("Let it be","Beatles"));
-
-        //Sammlung nach dem Hinzufügen der dritten CD anzeigen
-        System.out.println("Sammlung zum Zeitpunkt 2");
-        CDSammlung.zeigeCDSammlung();
-
-        //Entfernen der zweiten CD mit Hilfe der zugehörigen Objektreferenz
-        CDSammlung.entfernenCD(zweiteCD);
-
-        //Anzeigen der Sammlung nach dem Entfernen
-        System.out.println("Sammlung zum Zeitpunkt 3");
-        CDSammlung.zeigeCDSammlung();
-
-        //Entfernen über Titel und Interpret
-        CDSammlung.entfernenCD("Test-Titel","Test-Interpret");
-
-        //Anzeigen der Sammlung nach dem Entfernen über Titel und Interpret
-        System.out.println("Sammlung zum Zeitpunkt 4");
-        CDSammlung.zeigeCDSammlung();
     }
 }
 

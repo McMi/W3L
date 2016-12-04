@@ -8,7 +8,7 @@ public class CD {
     private String titel;
     private String interpret;
 
-    public CD(){
+    private CD(){
     }
 
     public CD(String titel, String interpret){

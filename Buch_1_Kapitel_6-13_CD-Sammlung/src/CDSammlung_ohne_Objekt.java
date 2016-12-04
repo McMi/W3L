@@ -1,13 +1,39 @@
 /**
- * Die Klasse CDSammlung ermöglicht die Verwaltung einer CD-Sammlung mit maximal 15 CDs. Das Verwalten umfasst die
- * Operationen Hinzufügen und Entfernen von CDs sowie das Ansehen der gesamten Sammlung. Die Ausgabe erfolgt auf
- * der Konsole.
+ * Die Klasse CDSammlung ermöglicht die Verwaltung einer CD-Sammlung mit einer konfigurierbaren Maximalanzahl von CDs.
+ * Das Verwalten umfasst die Operationen Hinzufügen und Entfernen von CDs sowie das Ansehen der gesamten Sammlung.
+ * Die Ausgabe erfolgt auf der Konsole.
  *
  * Erstellt von M. Lintl am 11.10.2016
  */
 public class CDSammlung_ohne_Objekt {
     private static final int kapazitaet = 5;
     private static String[][] sammlung = new String[kapazitaet][2];
+
+    public static void main (String args[]){
+        //Sammlung iniitalisieren
+        for(int i=0; i<sammlung.length;i++){
+            sammlung[i][0]="";
+            sammlung[i][1]="";
+        }
+        //Leere Sammlung zu Beginn
+        System.out.println("Sammlung zum Zeitpunkt 0");
+        CDSammlung_ohne_Objekt.zeigeCDSammlung();
+
+        //ersten zwei CDs hinzufügen
+        CDSammlung_ohne_Objekt.hinzufuegenCD("Mrs. Robinson", "Simon and Garfunkel");
+        CDSammlung_ohne_Objekt.hinzufuegenCD("Mambo No. 5", "Lou Bega");
+
+        //Anzeigen der Sammlung nach dem Hinzufügen der ersten zwei CDs
+        System.out.println("Sammlung zum Zeitpunkt 1");
+        CDSammlung_ohne_Objekt.zeigeCDSammlung();
+
+        //Entfernen einer CD
+        CDSammlung_ohne_Objekt.entfernenCD("Mambo No. 5", "Lou Bega");
+
+        //Anzeigen der Sammlung nach dem Entfernen einer CD
+        System.out.println("Sammlung zum Zeitpunkt 2");
+        CDSammlung_ohne_Objekt.zeigeCDSammlung();
+    }
 
     private static void hinzufuegenCD(String titel, String interpret){
         int i=0;
@@ -54,32 +80,6 @@ public class CDSammlung_ohne_Objekt {
              }
         }
         System.out.println("");
-    }
-
-    public static void main (String args[]){
-        //Sammlung iniitalisieren
-        for(int i=0; i<sammlung.length;i++){
-            sammlung[i][0]="";
-            sammlung[i][1]="";
-        }
-        //Leere Sammlung zu Beginn
-        System.out.println("Sammlung zum Zeitpunkt 0");
-        CDSammlung_ohne_Objekt.zeigeCDSammlung();
-
-        //ersten zwei CDs hinzufügen
-        CDSammlung_ohne_Objekt.hinzufuegenCD("Mrs. Robinson", "Simon and Garfunkel");
-        CDSammlung_ohne_Objekt.hinzufuegenCD("Mambo No. 5", "Lou Bega");
-
-        //Anzeigen der Sammlung nach dem Hinzufügen der ersten zwei CDs
-        System.out.println("Sammlung zum Zeitpunkt 1");
-        CDSammlung_ohne_Objekt.zeigeCDSammlung();
-
-        //Entfernen einer CD
-        CDSammlung_ohne_Objekt.entfernenCD("Mambo No. 5", "Lou Bega");
-
-        //Anzeigen der Sammlung nach dem Entfernen einer CD
-        System.out.println("Sammlung zum Zeitpunkt 2");
-        CDSammlung_ohne_Objekt.zeigeCDSammlung();
     }
 }
 
