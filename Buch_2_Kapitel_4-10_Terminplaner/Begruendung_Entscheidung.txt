@@ -1,0 +1,4 @@
+Ich habe mich für die Klasse LocalDate entschieden, da sie die Speicherung eines Datums (ohne Zeitzone) ermöglicht.
+Ich werde die Operation compareTo(...) verwenden, um die Anforderungen der Aufgabe zu erfüllen,
+dass ein Termin-Objekt mit einem anderen vergleichbar sein soll. Außerdem werde ich die Funktion now() verwenden, um
+zu überprüfen, ob ein Termin in der Zukunft liegt und damit zulässig ist.
