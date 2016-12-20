@@ -3,4 +3,4 @@
  *
  * Erstellt von M. Lintl am 29.10.2016
  */
-public enum Pflegestufe {I, II, III};
+public enum Pflegestufe {I, II, III}

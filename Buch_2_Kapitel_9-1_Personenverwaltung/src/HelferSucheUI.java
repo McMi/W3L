@@ -76,6 +76,11 @@ public class HelferSucheUI {
 
     private static void druckeHelferdaten(Helfer einHelfer){
         druckePersonendaten(einHelfer);
-        System.out.print("\t" + einHelfer.getHatAusbildung());
+        if(einHelfer.getHatAusbildung()){
+            System.out.print("\tAusbildung vorhanden");
+        }
+        else {
+            System.out.print("\tKeine Ausbildung");
+        }
     }
 }
