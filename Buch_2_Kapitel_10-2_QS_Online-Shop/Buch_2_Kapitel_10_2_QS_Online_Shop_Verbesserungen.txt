@@ -1,0 +1,15 @@
+Ich, Michael Lintl, schlage folgende Verbesserungen vor:
+
+- Entfernung des "ü" aus dem UML-Diagramm, stattdessen "ue" (Umlaute sind national und widersprechen den Bezeichnerregeln. Außerdem kann das eine Rolle speilen, wenn ich das Modell generieren möchte)
+- Verwendung des Typs "integer" statt "double", da in meinem Online-Shop keine Beträge über 21 Mio. Euro in Rechnung gestellt werden (und somit durch diese Maßnahme Speicherplatz gespart werden kann).
+- Auflösen der Klasse "Bezahlung", sodass eine Hierarchie entsteht mit den spezialisierten Klassen "BezahlungBankeinzug", "BezahlungKreditkarte" und "BezahlungRechnung". Dies dient dem Zweck eine starke Bindung der einzelnen Klassen zu erreichen.
+- Neue Klasse "Bezahlung" wird abstrakte Oberklasse für die spezialisierten Klassen.
+- Erstellung des Datentyps "Anschrift", um die Anschrift für die Bestellung / Rechnung nicht in einem String speichern zu müssen. So können bei Bedarf z.B. die Bestellungen leichter analysiert werden (etwa "Wohin versende ich die meisten Bestellungen?" o.ä.). In diesem Zug habe ich auch das Attribut "anschrift" aus "Bestellung" in "bestellungsanschrift" umbenannt, um hier keine Missverständnisse aufkommen zu lassen.
+- Auslagerung der Namen des Bankinstitut bzw. Kreditkarteninstituts (und ggf. weiterer Informationen) in eigene Klassen, um nicht in den Bezahl-Klassen redundant die Namen zu speichern, sondern die jeweiligen Institute nur zu referenzieren.
+- Ergänzung der Multiplizitäten.
+- Ersetzen der "normalen" Assoziation zwischen Bestellung und Bezahlung durch eine Komposition, da hier eine Existenzabhängigkeit besteht.
+
+Nein, die Klasse "Bezahlung" besitzt keine starke Bindung, da sie mehrere Bezahlformen bündelt und somit nicht für eine einzelne, abgeschlossene Aufgabe zuständig ist.
+Es würden jeweils die Attribute der nicht gewählten Bezahlungsart nicht gefüllt werden (d.h. In der ursprünglichen Modellierung sind "Temporary fields" vorhanden).
+
+Ich würde den Entwurf als verbesserungswürdig bewerten.
